@@ -1,0 +1,45 @@
+class @tools.math.api.nod
+#_[name="tools.math.api.nod"]
+#_[description="Number of the Day"]
+#_[thingpedia_name="tools.math.api.nod"]
+#_[thingpedia_description="Number of the Day skill"]
+#[license="BSD-3-Clause"]
+#[license_gplcompatible=true]
+#[subcategory="service"]
+{
+  import loader from @org.thingpedia.v2();
+  import config from @org.thingpedia.config.none();
+
+  monitorable query nod(out id: Number
+                        #_[canonical={
+                                 base=["number"],
+                                 passive_verb=["number #"]
+                               }],
+                               out title: String
+                               #_[canonical={
+                                 base=["name", "title"],
+                                 passive_verb=["titled #", "called #"]
+                               }]
+                               #[filterable=false]
+                               #[string_values="com.xkcd:title"],
+                               out roman: String
+                               #_[canonical={
+                                 base=["roman numeral", "roman"]
+                               }]
+                               #[filterable=false]
+                               #[string_values="com.xkcd:alt_text"])
+  #_[canonical=["xkcd comic", "xkcd"]]
+  #_[confirmation="an Xkcd comic"]
+  #_[result=["i found xkcd ${id}"]]
+  #_[formatted=[{
+     type="rdl",
+     webCallback="${link}",
+     displayTitle="${title}",
+     pictureUrl="${picture_url}",
+     displayText="${alt_text}"
+  }]]
+  #[minimal_projection=["id", "title"]]
+  #[poll_interval=86400000ms]
+  #[doc="retrieve the comic with a given number, or the latest comic"];
+
+}
