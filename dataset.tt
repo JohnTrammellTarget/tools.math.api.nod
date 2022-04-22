@@ -1,0 +1,8 @@
+dataset @tools.math.api.nod {
+    program = @tools.math.api.nod()
+    #_[utterances=[
+        "number of the day",
+        "today's number",
+        "daily number",
+        "number"]]
+}
