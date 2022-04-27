@@ -1,0 +1,6 @@
+tools.math.api.nod-000	what is the id of the number of the day ?	[ id ] of @tools.math.api.nod . get ( ) ;
+tools.math.api.nod-001	what is the number of the day 's id ?	[ id ] of @tools.math.api.nod . get ( ) ;
+tools.math.api.nod-002	what id does the number of the day have ?	[ id ] of @tools.math.api.nod . get ( ) ;
+tools.math.api.nod-003	what is the identity of the number of the day ?	[ id ] of @tools.math.api.nod . get ( ) ;
+tools.math.api.nod-004	what is the number of the day 's identity ?	[ id ] of @tools.math.api.nod . get ( ) ;
+tools.math.api.nod-005	what identity does the number of the day have ?	[ id ] of @tools.math.api.nod . get ( ) ;
