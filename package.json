@@ -1,0 +1,7 @@
+{
+  "name": "tools.math.api.nod",
+  "description": "",
+  "author": "John Trammell <john.trammell@gmail.com>",
+  "license": "BSD-3-Clause",
+  "main": "index.js"
+}

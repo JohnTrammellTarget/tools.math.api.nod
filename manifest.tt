@@ -1,0 +1,27 @@
+// vim: set ai et ts=4 sw=4 sts=4 :
+class @tools.math.api.nod
+#_[name="tools.math.api.nod"]
+#_[description="Number of the Day"]
+#_[thingpedia_name="tools.math.api.nod"]
+#_[thingpedia_description="Number of the Day skill"]
+#[license="Apache-2.0"]
+#[license_gplcompatible=true]
+#[subcategory="service"]
+{
+    // use the generic REST loader
+    import loader from @org.thingpedia.generic_rest.v1();
+
+    // one simple REST query function
+    query get(out number: Number
+                #_[canonical={
+                    default="base",
+                    base=["number"],
+                    preposition=["# of the day"],
+                    property=["number"]
+                }]
+                #[json_key="contents.nod.numbers.id"])
+        //#_[canonical=["number of the day"]]
+        #_[result=["The number of the day is ${number}"]]
+        #[doc="get the number of the day"]
+        #[url="https://api.math.tools/numbers/nod"];
+}
